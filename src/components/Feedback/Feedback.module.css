@@ -1,0 +1,14 @@
+.feedbackWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedbackResults {
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 150px;
+}
