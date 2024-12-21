@@ -1,6 +1,7 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
+import CustomField from "../CustomField/CustomField";
 
 const ContactForm = ({ addContact }) => {
   const handleSubmit = (values, actions) => {
@@ -26,33 +27,12 @@ const ContactForm = ({ addContact }) => {
       onSubmit={handleSubmit}
       initialValues={{ username: "", usernumber: "" }}
       validationSchema={registerSchema}
-      validateOnChange={true} // Перевірка помилок під час зміни значення
-      validateOnBlur={true} // Перевірка помилок при втраті фокуса
     >
       <div className={s.wrapperContactForm}>
         <Form className={s.formContactForm}>
-          <label className={s.labelContactForm}>
-            <span>Name</span>
-            <Field className={s.inputContactForm} type="text" name="username" />
-            <ErrorMessage
-              name="username"
-              component="div"
-              className={s.errorMessage}
-            />
-          </label>
-          <label className={s.labelContactForm}>
-            <span>Number</span>
-            <Field
-              className={s.inputContactForm}
-              type="text"
-              name="usernumber"
-            />
-            <ErrorMessage
-              name="usernumber"
-              component="div"
-              className={s.errorMessage}
-            />
-          </label>
+          <CustomField label="Name" name="username" />
+          <CustomField label="Number" name="usernumber" />
+
           <button className={s.buttonContactForm} type="submit">
             Add contact
           </button>

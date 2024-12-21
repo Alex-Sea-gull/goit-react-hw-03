@@ -2,7 +2,7 @@ import { FaUser } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import s from "./Contact.module.css";
 
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, id, deleteContact }) => {
   return (
     <div className={s.wrapperContactItem}>
       <ul className={s.contactItem}>
@@ -16,7 +16,11 @@ const Contact = ({ name, number }) => {
             <span>{number}</span>
           </div>
         </div>
-        <button className={s.contactButton} type="submit">
+        <button
+          className={s.contactButton}
+          type="button"
+          onClick={() => deleteContact(id)}
+        >
           Delete
         </button>
       </ul>

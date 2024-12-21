@@ -1,6 +1,5 @@
 .wrapperContactItem {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -9,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    width: 300px;
+    width: 400px;
 }
 
 .contactItem {
@@ -27,12 +26,17 @@
     flex-direction: column;
     gap: 5px;
     align-items: flex-start;
+    width: 100%;
 }
 
 .userNameWrapper,
 .userPhoneWrapper {
     display: flex;
     align-items: center;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .icon {

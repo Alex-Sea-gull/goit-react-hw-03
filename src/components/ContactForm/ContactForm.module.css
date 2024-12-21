@@ -55,11 +55,13 @@
     background-color: blue;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 .buttonContactForm:active {
     transform: scale(0.95);
     box-shadow: none;
+    border: none;
 }
 
 .errorMessage {
